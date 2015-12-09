@@ -1,0 +1,5 @@
+/*!CK:384202757!*//*1439175661,*/
+
+if (self.CavalryLogger) { CavalryLogger.start_js(["cHh5G"]); }
+
+__d('ShareNowController',['Dialog','Event','ShareNowCounter','ShareNowCounterEvent','ShareNowConstants'],function a(b,c,d,e,f,g,h,i,j,k,l){if(c.__markCompiled)c.__markCompiled();var m,n={initMenu:function(o){var p=o.getTriggerElem();i.listen(p,'success',(function(event){try{var r=event.data.response.payload;if(r.share_now_succeeded)this.showSuccess(r.message);}catch(q){}}).bind(this));i.listen(p,'error',(function(event){try{this.showError(event.data.response.errorDescription);}catch(q){this.showError();}}).bind(this));o.getPopover().subscribe('show',this._logMenuShown);},showSuccess:function(o){this.showDialog(o||l.success);},showError:function(o){this.showDialog(o||l.error);},showDialog:function(o){if(m)m.destroy();m=new h().setBody(o).setAutohide(2500).setModal(true).show();},_logMenuShown:function(){j.logEvent(k.OPEN_SHARE_NOW);}};f.exports=n;},null);
